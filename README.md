@@ -55,9 +55,9 @@ The following apt-cache commands will show varying amounts of information on the
   - The certificate presented to the client is self-signed  
   - A certificate in the chain of trust has expired.  
 
-#### Demo environment:  
-VirtualBox instance of Ubuntu 12.04
-Vagrant is used to provision with a simple step of uploading the ssl.sh file  
+#### Demo environment:
+Vagrant
+VirtualBox
 
 #### Ubuntu 12.04 and SSL  
 Openssl version: OpenSSL 1.0.1 14 Mar 2012  
