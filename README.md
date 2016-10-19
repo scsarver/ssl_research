@@ -55,9 +55,39 @@ The following apt-cache commands will show varying amounts of information on the
   - The certificate presented to the client is self-signed  
   - A certificate in the chain of trust has expired.  
 
-#### Demo environment:
+#### Demo environment requirements:
+Git  
 Vagrant  
 VirtualBox  
+
+#### How do I run the Demo:  
+- Assuming you meet the Demo environment requirements noted above checkout this project using git.  
+- run the command:  
+      `vagrant up`  
+- Once your vagrant machine has been built and is running check the status by issuing the following command:  
+      `vagrant status`  
+    I would expect to see the following:  
+      `Current machine states:`  
+      `ssl1                      running (virtualbox)`  
+- Use the ssh utility of vagrant to get a terminal into your virtual machine:  
+      `vagrant ssh`
+- Once you are on your virtual machines shell you can verify that the shell scripts have been placed in your home directory by issuing the following command:      
+      `ls -l`  
+    I would expect to see the following:
+      `total 15`  
+      `-rwxr----- 1 vagrant vagrant 1813 Oct 19 20:50 break_ssl.sh`  
+      `-rwxr----- 1 vagrant vagrant  533 Oct 19 20:50 ssl_reset.sh`  
+      `-rwxr----- 1 vagrant vagrant 1789 Oct 19 20:50 ssl.sh`  
+- Run the first bash script to show the default state of the ssl connections by issuing the following command:  
+      `./ssl.sh`  
+    Here will show a series of comments and commands issued demonstrating verbosely https requests being made.   
+- Run the second bash script to break the trust chain of your virtual machines operating systems certificates.
+      `./break_ssl.sh`  
+    Here will show a series of comments and commands issued removing Equifax and GeoTrust certificates form the system and demonstrating verbosely https requests being made that fail.  
+- Run the third bash script to fix your virtual machines operating system certificates.     
+      `./break_ssl.sh`  
+    Here will show a series of comments and commands issued that repaire the changes made by the break_ssl.sh script.  
+
 
 #### Ubuntu 12.04 and SSL  
 Openssl version: OpenSSL 1.0.1 14 Mar 2012  
