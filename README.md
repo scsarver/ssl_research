@@ -56,8 +56,8 @@ The following apt-cache commands will show varying amounts of information on the
   - A certificate in the chain of trust has expired.  
 
 #### Demo environment:
-Vagrant
-VirtualBox
+Vagrant  
+VirtualBox  
 
 #### Ubuntu 12.04 and SSL  
 Openssl version: OpenSSL 1.0.1 14 Mar 2012  
