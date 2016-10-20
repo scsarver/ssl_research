@@ -101,3 +101,4 @@ References:
 - http://security.stackexchange.com/questions/59566/ssl-certificate-chain-verification
 - http://security.stackexchange.com/questions/56389/ssl-certificate-framework-101-how-does-the-browser-actually-verify-the-validity
 - https://support.f5.com/kb/en-us/solutions/public/15000/200/sol15292.html
+- https://www.digicert.com/digicert-root-certificates.htm
