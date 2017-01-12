@@ -2,7 +2,7 @@
 
 ## SSL Research  
 
-The purpose of this project is to demonstrate how SSL certificates work.  
+The purpose of this project is to demonstrate how SSL certificates work and as a repository of markdown notes for related ssl/tls/ssh research.  
 
 #### What is SSL?  
 
