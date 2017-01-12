@@ -3,10 +3,10 @@ The case that brought me to write this short note involved a users sudden inabil
 to connect to github when executing a capistrano build and receiving an error like  
 the following:   
 
-    ```
-    The deploy has failed with an error:  
-    #<SSHKit::runner::ExecuteError: Exception while executing on host xxx.xxxxxx.xxx: exit>
     ```  
+    The deploy has failed with an error:  
+    #<SSHKit::runner::ExecuteError: Exception while executing on host xxx.xxxxxx.xxx: exit>  
+    ```    
 
 Some of the clues for this case involved:  
 - The user just upgraded the operating system software  
