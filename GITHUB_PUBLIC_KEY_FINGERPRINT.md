@@ -1,9 +1,10 @@
-### Verify a public keys finger print to solve Github connectivity issues ###
+### Verify a public keys fingerprint to solve Github connectivity issues. ###
 The case that brought me to write this short note involved a users sudden inability  
-to connect to github when executing a capistrano build receiving an error like  
+to connect to github when executing a capistrano build and receiving an error like  
 the following:   
-    The deploy has failed with an error:  
-    #<SSHKit::runner::ExecuteError: Exception while executing on host xxx.xxxxxx.xxx: exit>  
+
+    `The deploy has failed with an error:  
+    #<SSHKit::runner::ExecuteError: Exception while executing on host xxx.xxxxxx.xxx: exit>`  
 
 Some of the clues for this case involved:  
 - The user just upgraded the operating system software  
@@ -19,9 +20,9 @@ see that the culprit of the failing build was happening due to  permissions:
           DEBUG[a8784a27] 	fatal: The remote end hung up unexpectedly  
 
 This lead me to ask the question if there was possibly a problem when copying the  
-new rsa key to git hub which brings me to the point of this note: how do we verify  
+new rsa key to github which brings me to the point of this note:  How do we verify  
 that the public key we put in github matches the public side of our private key on  
-our system.
+our system?
 
 So first we want to get the fingerprint of the key in github which will be under  
 your account settings 'SSH and GPG keys' at this url: https://github.com/settings/keys  
@@ -32,7 +33,7 @@ and my look like the following:
           Added on Dec 18, 2015 — Last used within the last day
 
 Now in order to find out the finger print of the key on our system we will want  
-to verify or list the key to be sure the key is the one we execpt:
+to verify or list the key to be sure the key is the one we expect:
 
           ssh-keygen -lf ~/.ssh/id_rsa.pub
 
@@ -49,7 +50,7 @@ This should produce output like the following:
 
           4096 MD5:af:b7:c1:d4:ef:8a:b5:88:08:cd:08:5e:f7:89:ab:c2 youremail@yourdomain.com (RSA)
 
-Now by comparing side by side the MD5 hashes we will see they are the same if the  
+Now by comparing side by side the MD5 hashes we will see they are the same. If the  
 fingerprints are different you will get an authentication error when trying to connect to github.  
 Common solutions to this are as follows:  
 - Make sure you are copying the public side of your private/public key pair typically having a .pub file extension.  
