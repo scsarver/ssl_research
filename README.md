@@ -85,8 +85,8 @@ VirtualBox
       `./break_ssl.sh`  
     Here will show a series of comments and commands issued removing Equifax and GeoTrust certificates form the system and demonstrating verbosely https requests being made that fail.  
 - Run the third bash script to fix your virtual machines operating system certificates.     
-      `./break_ssl.sh`  
-    Here will show a series of comments and commands issued that repaire the changes made by the break_ssl.sh script.  
+      `./reset_ssl.sh`  
+    Here will show a series of comments and commands issued that repair the changes made by the break_ssl.sh script.  
 
 
 #### Ubuntu 12.04 and SSL  
